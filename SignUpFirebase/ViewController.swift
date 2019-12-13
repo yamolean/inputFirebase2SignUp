@@ -29,6 +29,34 @@ final class ViewController: UIViewController {
     }
     
     @IBAction fileprivate func didTapSignUpButton(_ sender: Any) {
+        let email = emailTextField.text ?? ""
+        let password = passwordTextField.text ?? ""
+        let name = nameTextField.text ?? ""
+         
+        // 新しいユーザアカウント作成
+        Auth.auth().createUser(withEmail: email, password: password) { [weak self] result, error in
+            guard let self = self else { return }
+            if let user = result?.user {
+                // ユーザに表示用の名前を与える
+                let req = user.createProfileChangeRequest()
+                req.displayName = name
+                req.commitChanges() { [weak self] error in
+                    guard let self = self else { return }
+                    if error == nil {
+                        // emailを送るメソッド
+                        user.sendEmailVerification() { [weak self] error in
+                            guard let self = self else { return }
+                            if error == nil {
+                                // 仮登録完了画面へ遷移する処理
+                            }
+                            self.showErrorIfNeeded(error)
+                        }
+                    }
+                    self.showErrorIfNeeded(error)
+                }
+            }
+            self.showErrorIfNeeded(error)
+        }
     }
     
 }
