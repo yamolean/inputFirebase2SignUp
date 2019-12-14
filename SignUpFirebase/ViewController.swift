@@ -17,7 +17,6 @@ final class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
     }
     
     fileprivate func showErrorIfNeeded(_ errorOrNil: Error?) {
@@ -66,7 +65,7 @@ final class ViewController: UIViewController {
             guard let self = self else { return }
             if let user = result?.user {
                 // サインイン後の処理
-                self.view.backgroundColor = .black
+                 print("サインイン")
             }
             self.showErrorIfNeeded(error)
         }
@@ -79,8 +78,7 @@ final class ViewController: UIViewController {
             guard let self = self else { return }
             if error != nil {
                 // 送信完了後の処理
-                //　なんでメールはくるけどここ呼ばれないの
-                self.view.backgroundColor = .red
+                print("送信")
             }
             self.showErrorIfNeeded(error)
         }
@@ -89,6 +87,7 @@ final class ViewController: UIViewController {
     @IBAction fileprivate func didTapSignOutButton(_ sender: Any) {
         do {
             try Auth.auth().signOut()
+            print("サインアウト")
         } catch let error {
             showErrorIfNeeded(error)
         }
@@ -98,8 +97,8 @@ final class ViewController: UIViewController {
         Auth.auth().currentUser?.delete() { [weak self] error in
             guard let self = self else { return }
             if error != nil {
-                // 非ログイン状態になるから非ログイン時の画面へ
-                self.view.backgroundColor = .green
+                // 非ログイン状態になるからSignUp時の画面へ
+                print("退会")
             }
             self.showErrorIfNeeded(error)
         }
