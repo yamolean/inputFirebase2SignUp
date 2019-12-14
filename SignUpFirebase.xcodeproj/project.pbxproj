@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,8 @@
 		18075EF823A40B9500D15DDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18075EF723A40B9500D15DDD /* Assets.xcassets */; };
 		18075EFB23A40B9500D15DDD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18075EF923A40B9500D15DDD /* LaunchScreen.storyboard */; };
 		18075F0323A40C6600D15DDD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18075F0223A40C6600D15DDD /* GoogleService-Info.plist */; };
+		18FED57723A53B930053E188 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FED57623A53B930053E188 /* LoginViewController.swift */; };
+		18FED57923A53BF80053E188 /* LoginViewStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18FED57823A53BF80053E188 /* LoginViewStoryboard.storyboard */; };
 		70E58BCC7C7DA2ADBCDE93D0 /* Pods_SignUpFirebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5DE51B5E7C902BA46BDF885 /* Pods_SignUpFirebase.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +29,8 @@
 		18075EFA23A40B9500D15DDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18075EFC23A40B9500D15DDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18075F0223A40C6600D15DDD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		18FED57623A53B930053E188 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = "../../try firebase/try firebase/LoginViewController.swift"; sourceTree = "<group>"; };
+		18FED57823A53BF80053E188 /* LoginViewStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginViewStoryboard.storyboard; sourceTree = "<group>"; };
 		45E25B53259EA80F4D9AD723 /* Pods-SignUpFirebase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SignUpFirebase.debug.xcconfig"; path = "Target Support Files/Pods-SignUpFirebase/Pods-SignUpFirebase.debug.xcconfig"; sourceTree = "<group>"; };
 		5702C43AB33DAD4D68B3A697 /* Pods-SignUpFirebase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SignUpFirebase.release.xcconfig"; path = "Target Support Files/Pods-SignUpFirebase/Pods-SignUpFirebase.release.xcconfig"; sourceTree = "<group>"; };
 		B5DE51B5E7C902BA46BDF885 /* Pods_SignUpFirebase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SignUpFirebase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,6 +72,8 @@
 				18075EEE23A40B9400D15DDD /* AppDelegate.swift */,
 				18075EF023A40B9400D15DDD /* SceneDelegate.swift */,
 				18075EF223A40B9400D15DDD /* ViewController.swift */,
+				18FED57623A53B930053E188 /* LoginViewController.swift */,
+				18FED57823A53BF80053E188 /* LoginViewStoryboard.storyboard */,
 				18075EF423A40B9400D15DDD /* Main.storyboard */,
 				18075EF723A40B9500D15DDD /* Assets.xcassets */,
 				18075EF923A40B9500D15DDD /* LaunchScreen.storyboard */,
@@ -91,7 +97,6 @@
 				45E25B53259EA80F4D9AD723 /* Pods-SignUpFirebase.debug.xcconfig */,
 				5702C43AB33DAD4D68B3A697 /* Pods-SignUpFirebase.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -159,6 +164,7 @@
 				18075F0323A40C6600D15DDD /* GoogleService-Info.plist in Resources */,
 				18075EF823A40B9500D15DDD /* Assets.xcassets in Resources */,
 				18075EF623A40B9400D15DDD /* Main.storyboard in Resources */,
+				18FED57923A53BF80053E188 /* LoginViewStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,6 +219,7 @@
 			files = (
 				18075EF323A40B9400D15DDD /* ViewController.swift in Sources */,
 				18075EEF23A40B9400D15DDD /* AppDelegate.swift in Sources */,
+				18FED57723A53B930053E188 /* LoginViewController.swift in Sources */,
 				18075EF123A40B9400D15DDD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
