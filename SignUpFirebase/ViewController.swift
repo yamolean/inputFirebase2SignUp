@@ -66,8 +66,8 @@ final class ViewController: UIViewController {
             if let user = result?.user {
                 // サインイン後の処理
                  print("サインイン")
-//                let vc = LoginViewController.instantiate()
-//                navigationController?.pushViewController(vc, animated: true)
+                let vc = LoginViewController.instantiate()
+                self.navigationController?.pushViewController(vc, animated: true)
             }
             self.showErrorIfNeeded(error)
         }
