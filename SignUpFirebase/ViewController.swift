@@ -58,7 +58,7 @@ final class ViewController: UIViewController {
         }
     }
     
-    @IBAction func didTapSignInButton(_ sender: Any) {
+    @IBAction fileprivate func didTapSignInButton(_ sender: Any) {
         let email = emailTextField.text ?? ""
         let password = passwordTextField.text ?? ""
          
@@ -72,7 +72,7 @@ final class ViewController: UIViewController {
         }
     }
     
-    @IBAction func passwordResetButton(_ sender: Any) {
+    @IBAction fileprivate func passwordResetButton(_ sender: Any) {
         let email = emailTextField.text ?? ""
          
         Auth.auth().sendPasswordReset(withEmail: email) { [weak self] error in
@@ -86,7 +86,7 @@ final class ViewController: UIViewController {
         }
     }
     
-    @IBAction func didTapSignOutButton(_ sender: Any) {
+    @IBAction fileprivate func didTapSignOutButton(_ sender: Any) {
         do {
             try Auth.auth().signOut()
         } catch let error {
@@ -94,6 +94,16 @@ final class ViewController: UIViewController {
         }
     }
     
+    @IBAction func didTapWithdrawButton(_ sender: Any) {
+        Auth.auth().currentUser?.delete() { [weak self] error in
+            guard let self = self else { return }
+            if error != nil {
+                // 非ログイン状態になるから非ログイン時の画面へ
+                self.view.backgroundColor = .green
+            }
+            self.showErrorIfNeeded(error)
+        }
+    }
     
 }
 
