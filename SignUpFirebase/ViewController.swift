@@ -65,7 +65,7 @@ final class ViewController: UIViewController {
         Auth.auth().signIn(withEmail: email, password: password) { [weak self] result, error in
             guard let self = self else { return }
             if let user = result?.user {
-                // サインイン後の画面
+                // サインイン後の処理
                 self.view.backgroundColor = .black
             }
             self.showErrorIfNeeded(error)
@@ -78,13 +78,21 @@ final class ViewController: UIViewController {
         Auth.auth().sendPasswordReset(withEmail: email) { [weak self] error in
             guard let self = self else { return }
             if error != nil {
-                // 送信完了画面
+                // 送信完了後の処理
                 //　なんでメールはくるけどここ呼ばれないの
+                self.view.backgroundColor = .red
             }
             self.showErrorIfNeeded(error)
         }
     }
     
+    @IBAction func didTapSignOutButton(_ sender: Any) {
+        do {
+            try Auth.auth().signOut()
+        } catch let error {
+            showErrorIfNeeded(error)
+        }
+    }
     
     
 }

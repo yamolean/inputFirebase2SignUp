@@ -75,9 +75,12 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="J1b-Da-kPl"/>
                                 </constraints>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="SignOut">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="didTapSignOutButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2HA-k5-chn"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mca-pz-bxi">
                                 <rect key="frame" x="100" y="586" width="214" height="50"/>
