@@ -32,7 +32,6 @@ final class ViewController: UIViewController {
         let email = emailTextField.text ?? ""
         let password = passwordTextField.text ?? ""
         let name = nameTextField.text ?? ""
-         
         // 新しいユーザアカウント作成
         Auth.auth().createUser(withEmail: email, password: password) { [weak self] result, error in
             guard let self = self else { return }
@@ -58,6 +57,35 @@ final class ViewController: UIViewController {
             self.showErrorIfNeeded(error)
         }
     }
+    
+    @IBAction func didTapSignInButton(_ sender: Any) {
+        let email = emailTextField.text ?? ""
+        let password = passwordTextField.text ?? ""
+         
+        Auth.auth().signIn(withEmail: email, password: password) { [weak self] result, error in
+            guard let self = self else { return }
+            if let user = result?.user {
+                // サインイン後の画面
+                self.view.backgroundColor = .black
+            }
+            self.showErrorIfNeeded(error)
+        }
+    }
+    
+    @IBAction func passwordResetButton(_ sender: Any) {
+        let email = emailTextField.text ?? ""
+         
+        Auth.auth().sendPasswordReset(withEmail: email) { [weak self] error in
+            guard let self = self else { return }
+            if error != nil {
+                // 送信完了画面
+                //　なんでメールはくるけどここ呼ばれないの
+            }
+            self.showErrorIfNeeded(error)
+        }
+    }
+    
+    
     
 }
 

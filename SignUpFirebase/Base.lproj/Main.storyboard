@@ -16,17 +16,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nff-zJ-lCL">
-                                <rect key="frame" x="50" y="194" width="314" height="34"/>
+                                <rect key="frame" x="50" y="144" width="314" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GNu-dE-dad">
-                                <rect key="frame" x="50" y="248" width="314" height="34"/>
+                                <rect key="frame" x="50" y="198" width="314" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DVo-Hb-C5T">
-                                <rect key="frame" x="100" y="386" width="214" height="50"/>
+                                <rect key="frame" x="100" y="306" width="214" height="50"/>
                                 <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Uwi-Io-mKP"/>
@@ -39,21 +39,79 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HEC-3d-DAM">
-                                <rect key="frame" x="50" y="302" width="314" height="34"/>
+                                <rect key="frame" x="50" y="252" width="314" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Siz-7v-zkW">
+                                <rect key="frame" x="100" y="376" width="214" height="50"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="J71-QW-XN2"/>
+                                </constraints>
+                                <state key="normal" title="SignIN">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapSignInButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dmb-ru-q7M"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f8I-Hz-KJi">
+                                <rect key="frame" x="100" y="446" width="214" height="50"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="kJO-H5-xYH"/>
+                                </constraints>
+                                <state key="normal" title="Password Reset Send Email ">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="passwordResetButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4rC-z3-H8X"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v2X-ZV-ETA">
+                                <rect key="frame" x="100" y="516" width="214" height="50"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="J1b-Da-kPl"/>
+                                </constraints>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mca-pz-bxi">
+                                <rect key="frame" x="100" y="586" width="214" height="50"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="6sq-UI-cfC"/>
+                                </constraints>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DVo-Hb-C5T" secondAttribute="trailing" constant="100" id="2PK-Zu-165"/>
-                            <constraint firstItem="nff-zJ-lCL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="BJr-2B-RsE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="f8I-Hz-KJi" secondAttribute="trailing" constant="100" id="4mC-hQ-2fW"/>
+                            <constraint firstItem="v2X-ZV-ETA" firstAttribute="top" secondItem="f8I-Hz-KJi" secondAttribute="bottom" constant="20" id="60R-wD-e2M"/>
+                            <constraint firstItem="nff-zJ-lCL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="BJr-2B-RsE"/>
+                            <constraint firstItem="v2X-ZV-ETA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="BN3-Hb-CnF"/>
+                            <constraint firstItem="Siz-7v-zkW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="HUn-hg-OX6"/>
+                            <constraint firstItem="Siz-7v-zkW" firstAttribute="top" secondItem="DVo-Hb-C5T" secondAttribute="bottom" constant="20" id="LDd-He-bvr"/>
                             <constraint firstItem="HEC-3d-DAM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="Le4-JR-udH"/>
                             <constraint firstItem="GNu-dE-dad" firstAttribute="top" secondItem="nff-zJ-lCL" secondAttribute="bottom" constant="20" id="PBK-hc-zId"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GNu-dE-dad" secondAttribute="trailing" constant="50" id="QD7-GZ-tij"/>
                             <constraint firstItem="nff-zJ-lCL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="WDw-mI-MhX"/>
-                            <constraint firstItem="DVo-Hb-C5T" firstAttribute="top" secondItem="HEC-3d-DAM" secondAttribute="bottom" constant="50" id="Yoi-wf-R30"/>
+                            <constraint firstItem="f8I-Hz-KJi" firstAttribute="top" secondItem="Siz-7v-zkW" secondAttribute="bottom" constant="20" id="WgT-4w-bUy"/>
+                            <constraint firstItem="DVo-Hb-C5T" firstAttribute="top" secondItem="HEC-3d-DAM" secondAttribute="bottom" constant="20" id="Yoi-wf-R30"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Mca-pz-bxi" secondAttribute="trailing" constant="100" id="Zie-Hi-gBY"/>
                             <constraint firstItem="GNu-dE-dad" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="Zk2-k3-6Qo"/>
+                            <constraint firstItem="Mca-pz-bxi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="bhL-0n-gUQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Siz-7v-zkW" secondAttribute="trailing" constant="100" id="faH-wG-7rT"/>
+                            <constraint firstItem="f8I-Hz-KJi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="hG1-KG-pYY"/>
+                            <constraint firstItem="Mca-pz-bxi" firstAttribute="top" secondItem="v2X-ZV-ETA" secondAttribute="bottom" constant="20" id="kIh-nN-H6F"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="v2X-ZV-ETA" secondAttribute="trailing" constant="100" id="pQ8-WO-UoB"/>
                             <constraint firstItem="HEC-3d-DAM" firstAttribute="top" secondItem="GNu-dE-dad" secondAttribute="bottom" constant="20" id="qUx-KZ-N1s"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nff-zJ-lCL" secondAttribute="trailing" constant="50" id="sYh-C7-EIj"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HEC-3d-DAM" secondAttribute="trailing" constant="50" id="x0Z-0k-GiY"/>
